@@ -27,11 +27,11 @@ public class BinarySearch {
         String word = "";
         int big=max;
         int small=min;
-        for(int i=1; i<(Math.log(max-min+1)/Math.log(2));i++)
+        for(int i=0; i<=(Math.log(max-min+1)/Math.log(2));i++)
         {
             int checkvariable =(big+small)/2;
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Please enter the your number greater than : "+checkvariable);
+            System.out.println("Please enter the your number greater than : "+checkvariable);
             System.out.println("-------enter yes or no");
             word = scanner.next();
 
