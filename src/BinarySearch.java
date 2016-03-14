@@ -1,18 +1,29 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
+import java.io.IOException;
 /**
  * Created by hemanth on 09/03/2016.
  */
 public class BinarySearch {
     public static void main(String[] args) {
-
+        int max = 0;
+        int min = 0;
         String word = "";
         // read the maximum number
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter the maximum search value : ");
-        int max = scanner.nextInt();
-        System.out.print("Please enter the minimum search value : ");
-        int min = scanner.nextInt();
+        //Scanner scanner = new Scanner(System.in);
+        /*try {
+           System.out.print("Please enter the maximum search value : ");
+            max = scanner.nextInt();
+            System.out.print("Please enter the minimum search value : ");
+            min = scanner.nextInt();
+        }
+        catch (InputMismatchException error){
+            System.out.println(" Invaild Input ");
+            error.printStackTrace();
+            return;
+        }
+
         int yourvalue=0;
 
         //System.out.println(+checkvariable);
@@ -21,6 +32,7 @@ public class BinarySearch {
         System.out.println("-----------------------------------");
         System.out.println("Hurray!!!Your number is: " +yourvalue);
         System.out.println("-----------------------------------");
+    */
     }
     public static int Binarysearchfunction(int max, int min)
     {
@@ -41,6 +53,11 @@ public class BinarySearch {
                 small=(big+small)/2;
             }
         }
-        return(big);
+        System.out.println(" this is the value print: "+big);
+        if(big>=max) {
+        return 0;
+        }
+        else return 1;
+
     }
 }
